@@ -1,16 +1,16 @@
 // Pulled from https://github.com/mui/material-ui/tree/master/examples/material-ui-remix-ts in order to get MUI to work with Remix
 
+import { CacheProvider } from "@emotion/react";
+import { ThemeProvider } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterLuxon } from "@mui/x-date-pickers/node/AdapterLuxon";
+import { RemixBrowser } from "@remix-run/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { RemixBrowser } from "@remix-run/react";
-import { CacheProvider } from "@emotion/react";
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import ClientStyleContext from "./themes/ClientStyleContext";
 import createEmotionCache from "./themes/createEmotionCache";
 import { theme } from "./themes/theme";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
 
 interface ClientCacheProviderProps {
   children: React.ReactNode;

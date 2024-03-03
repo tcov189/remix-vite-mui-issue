@@ -6,11 +6,10 @@ import * as ReactDOMServer from "react-dom/server";
 import createEmotionCache from "./themes/createEmotionCache";
 import { CacheProvider } from "@emotion/react";
 import createEmotionServer from "@emotion/server/create-instance";
-import { CssBaseline } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { theme } from "./themes/theme";
 import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
+import { AdapterLuxon } from "@mui/x-date-pickers/node/AdapterLuxon";
 
 export default function handleRequest(
   request: Request,
